@@ -1,6 +1,13 @@
 <?php
 
 require 'config.php';
+require 'Core/Journal.php';
+
+spl_autoload_register(function ($class_name) {
+    if (file_exists("Journals/$class_name.php")) {
+      include "Journals/$class_name.php";
+    }
+});
 
 $policja_997_wydanie_specjalne_linki = [
   'http://www.gazeta.policja.pl/download/7/180717/Nr1specjalny072014.pdf' => array(1,2014,7),
@@ -543,6 +550,7 @@ function quote($text) {
 }
 
 function download($url, $file) {
+  echo "Pobieram $file...";
   $file_handle = fopen($url, 'r');
   if ($file_handle === false) {
     echo "Błąd!\n";
@@ -558,6 +566,21 @@ function ocr($input_file, $output_file, $title) {
   system($naps2_cmd . " -i \"$input_file\" -o \"$output_file\" --pdftitle \"$title\" --enableocr --ocrlang \"pol\" --verbose --profile \"PROF1\" ");
 }
 
+$journal = Patrol::get_collection();
+foreach ($journal as $issue) {
+  $url      = $issue[0];
+  $title    = $issue[1];
+  $file     = "$title.pdf";
+  $file_OCR = "$title (OCR).pdf";
+
+  if (file_exists($file) === false) {
+    download($url, $file);
+  } else {
+    echo '.';
+    //echo "Pomijam $file\n";
+  }
+}
+
 foreach ($policja_997_linki as $url => $opis) {
   $numer = $opis[0];
   $rok = $opis[1];
@@ -571,10 +594,10 @@ foreach ($policja_997_linki as $url => $opis) {
   }
 
   if (file_exists($file) === false) {
-    echo "Pobieram $file...";
     download($url, $file);
   } else {
-    echo "Pomijam $file\n";
+    echo '.';
+    //echo "Pomijam $file\n";
   }
 }
 
@@ -586,10 +609,10 @@ foreach ($policja_997_wydanie_specjalne_linki as $url => $opis) {
   $file = "Policja 997 Wydanie Specjalne - $rok-$miesiac nr $numer.pdf";
 
   if (file_exists($file) === false) {
-    echo "Pobieram $file\n";
     download($url, $file);
   } else {
-    echo "Pomijam $file\n";
+    echo '.';
+    //echo "Pomijam $file\n";
   }
 }
 
@@ -607,10 +630,10 @@ foreach ($gazeta_policyjna_linki as $url => $opis) {
   $file_OCR = "$title (OCR).pdf";
 
   if (file_exists($file) === false) {
-    echo "Pobieram $file\n";
     download($url, $file);
   } else {
-    echo "Pomijam $file\n";
+    echo '.';
+    //echo "Pomijam $file\n";
   }
 
   if ($enabled_ocr) {
@@ -618,7 +641,8 @@ foreach ($gazeta_policyjna_linki as $url => $opis) {
       echo "Rozpoznawanie znaków do pliku $file_OCR\n";
       ocr($file, $file_OCR, $title);
     } else {
-      echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
+      echo '.';
+      //echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
     }
   }
 }
@@ -632,10 +656,10 @@ foreach ($magazyn_kryminalny_links as $url => $opis) {
   $file_OCR = "$title (OCR).pdf";
 
   if (file_exists($file) === false) {
-    echo "Pobieram $file\n";
     download($url, $file);
   } else {
-    echo "Pomijam pobieranie $file\n";
+    echo '.';
+    //echo "Pomijam pobieranie $file\n";
   }
 
   if ($enabled_ocr) {
@@ -643,7 +667,8 @@ foreach ($magazyn_kryminalny_links as $url => $opis) {
       echo "Rozpoznawanie znaków do pliku $file_OCR\n";
       ocr($file, $file_OCR, $title);
     } else {
-      echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
+      echo '.';
+      //echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
     }
   }
 }
