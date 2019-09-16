@@ -20,6 +20,12 @@ php download-all.php
 
 Do pobrania jest 500+ plików, które po pobraniu zajmują około 7 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów zawiera po prostu skany. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR.
 
+Pobierane czasopisma:
+* Policja 997
+* Policja 997 wydanie specjalne
+* Gazeta Policyjna
+* Magazyn Kryminalny
+
 ## Jak uzyskano linki?
 
 Linki do plików wzięto z publicznie dostępnego serwisu http://www.gazeta.policja.pl/
