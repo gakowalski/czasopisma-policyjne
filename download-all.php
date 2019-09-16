@@ -1,5 +1,7 @@
 <?php
 
+require 'config.php';
+
 $policja_997_wydanie_specjalne_linki = [
   'http://www.gazeta.policja.pl/download/7/180717/Nr1specjalny072014.pdf' => array(1,2014,7),
   'http://www.gazeta.policja.pl/download/7/180720/Nr2specjalny042015.pdf' => array(2,2015,4),
@@ -536,8 +538,24 @@ $magazyn_kryminalny_links = [
   'http://www.gazeta.policja.pl/download/7/118081/file.file' => array(24,1990),
 ];
 
+function quote($text) {
+  return "\"$text\"";
+}
+
 function download($url, $file) {
-  file_put_contents($file, fopen($url, 'r'));
+  $file_handle = fopen($url, 'r');
+  if ($file_handle === false) {
+    echo "Błąd!\n";
+  } else {
+    $bytes = file_put_contents($file, $file_handle);
+    echo "$bytes bajtów pobrano!\n";
+    fclose($file_handle);
+  }
+}
+
+function ocr($input_file, $output_file, $title) {
+  global $naps2_cmd;
+  system($naps2_cmd . " -i \"$input_file\" -o \"$output_file\" --pdftitle \"$title\" --enableocr --ocrlang \"pol\" --verbose --profile \"PROF1\" ");
 }
 
 foreach ($policja_997_linki as $url => $opis) {
@@ -553,7 +571,7 @@ foreach ($policja_997_linki as $url => $opis) {
   }
 
   if (file_exists($file) === false) {
-    echo "Pobieram $file\n";
+    echo "Pobieram $file...";
     download($url, $file);
   } else {
     echo "Pomijam $file\n";
@@ -581,16 +599,27 @@ foreach ($gazeta_policyjna_linki as $url => $opis) {
   $czesc = $opis[2];
 
   if ($czesc) {
-    $file = "Gazeta Policyjna - $rok nr $numer część $czesc.pdf";
+    $title = "Gazeta Policyjna - $rok nr $numer część $czesc";
   } else {
-    $file = "Gazeta Policyjna - $rok nr $numer.pdf";
+    $title = "Gazeta Policyjna - $rok nr $numer";
   }
+  $file     = "$title.pdf";
+  $file_OCR = "$title (OCR).pdf";
 
   if (file_exists($file) === false) {
     echo "Pobieram $file\n";
     download($url, $file);
   } else {
     echo "Pomijam $file\n";
+  }
+
+  if ($enabled_ocr) {
+    if (file_exists($file_OCR) === false) {
+      echo "Rozpoznawanie znaków do pliku $file_OCR\n";
+      ocr($file, $file_OCR, $title);
+    } else {
+      echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
+    }
   }
 }
 
@@ -598,12 +627,23 @@ foreach ($magazyn_kryminalny_links as $url => $opis) {
   $numer = $opis[0];
   $rok = $opis[1];
 
-  $file = "Magazyn kryminalny 997 - $rok nr $numer.pdf";
+  $title    = "Magazyn kryminalny 997 - $rok nr $numer";
+  $file     = "$title.pdf";
+  $file_OCR = "$title (OCR).pdf";
 
   if (file_exists($file) === false) {
     echo "Pobieram $file\n";
     download($url, $file);
   } else {
-    echo "Pomijam $file\n";
+    echo "Pomijam pobieranie $file\n";
+  }
+
+  if ($enabled_ocr) {
+    if (file_exists($file_OCR) === false) {
+      echo "Rozpoznawanie znaków do pliku $file_OCR\n";
+      ocr($file, $file_OCR, $title);
+    } else {
+      echo "Pomijam rozpoznawanie znaków do $file_OCR\n";
+    }
   }
 }
