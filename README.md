@@ -18,7 +18,7 @@ php download-all.php
 
 ## Dane
 
-Do pobrania jest 500+ plików, które po pobraniu zajmują około 7 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów zawiera po prostu skany. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie.
+Do pobrania jest 600+ plików, które po pobraniu zajmują ponad 7 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości). Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
 
 Pobierane czasopisma:
 * Policja 997,
@@ -26,6 +26,7 @@ Pobierane czasopisma:
 * Gazeta Policyjna,
 * Magazyn Kryminalny,
 * Patrol,
+* Wiadomości Sekcji Polskiej IPA,
 * Kwartalnik Prawno-Kryminalistyczny,
 * Kwartalnik policyjny.
 
