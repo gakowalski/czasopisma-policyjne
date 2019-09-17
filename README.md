@@ -18,9 +18,11 @@ php download-all.php
 
 Czasami serwery są przeciążone i na niektóre próby pobrania danych odpowiadają błędem 503. Wówczas należy ponownić pobieranie po pewnym czasie.
 
+Aby skorzystać z bardzo podstawowego wsparcia dla OCR przez zewnętrzne narzędzie NASP
+
 ## Dane
 
-Do pobrania jest 700+ plików, które po pobraniu zajmują ponad 9 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości). Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
+Do pobrania jest 800+ plików, które po pobraniu zajmują ponad 9 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. Wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości) i jest nieprzeszukiwalna. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
 
 Pobierane czasopisma:
 * Policja 997,
