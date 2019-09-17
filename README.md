@@ -27,6 +27,8 @@ Pobierane czasopisma:
 * Magazyn Kryminalny,
 * Patrol,
 * Wiadomości Sekcji Polskiej IPA,
+* Policja Łódzkie,
+* Przegląd Prewencyjny,
 * Kwartalnik Prawno-Kryminalistyczny,
 * Kwartalnik policyjny.
 
