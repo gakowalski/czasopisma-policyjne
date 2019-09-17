@@ -1,6 +1,8 @@
 <?php
 
 class Kwartalnik_Prawno_Kryminalistyczny extends Journal {
+
+  // source: http://isp.policja.pl/isp/e-czytelnia
   public static $links = [
     'http://isp.policja.pl/download/12/1961/kwartalnik6-7.pdf' => [2011,'6-7'],
     'http://isp.policja.pl/download/12/1963/kwartalnik8-9.pdf' => [2011,'8-9'],

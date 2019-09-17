@@ -1,6 +1,8 @@
 <?php
 
 class Kwartalnik_Policyjny extends Journal {
+
+  // source: http://isp.policja.pl/isp/e-czytelnia
   public static $links = [
     'http://isp.policja.pl/download/12/2663/KwartalnikPolicyjny1272014m.pdf' => [2014,1],
     'http://isp.policja.pl/download/12/4134/KwartalnikPolicyjnynr2282014.pdf' => [2014,2],
