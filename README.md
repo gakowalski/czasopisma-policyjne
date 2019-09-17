@@ -16,9 +16,11 @@ Użycie poniższej komendy rozpocznie pobieranie danych:
 php download-all.php
 ```
 
+Czasami serwery są przeciążone i na niektóre próby pobrania danych odpowiadają błędem 503. Wówczas należy ponownić pobieranie po pewnym czasie.
+
 ## Dane
 
-Do pobrania jest 600+ plików, które po pobraniu zajmują ponad 7 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości). Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
+Do pobrania jest 700+ plików, które po pobraniu zajmują ponad 9 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. A wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości). Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
 
 Pobierane czasopisma:
 * Policja 997,
@@ -29,12 +31,20 @@ Pobierane czasopisma:
 * Wiadomości Sekcji Polskiej IPA,
 * Policja Łódzkie,
 * Przegląd Prewencyjny,
+* Stołeczny Magazyn Policyjny,
 * Kwartalnik Prawno-Kryminalistyczny,
 * Kwartalnik policyjny.
 
 ## Jak uzyskano linki?
 
-Linki do plików wzięto z publicznie dostępnego serwisu http://www.gazeta.policja.pl/
+Linki do plików wzięto z publicznie dostępnych zasobów serwisów:
+* http://www.gazeta.policja.pl/
+* http://isp.policja.pl/
+* http://www.slupsk.szkolapolicji.gov.pl/
+* http://lodzka.policja.gov.pl/
+* http://pomorska.policja.gov.pl/
+* http://ipapolska.pl/
+* http://magazyn.policja.waw.pl/
 
 Wybierano je w sposób częściowo zautomatyzowany ze stron za pomocą kodu JavaScript:
 

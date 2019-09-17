@@ -1,5 +1,7 @@
 <?php
 
+if (file_exists('config.php') === false) die("Najpierw przygotuj plik config.php bazujac na config.sample.php.");
+
 require 'config.php';
 require 'Core/Journal.php';
 
@@ -41,6 +43,7 @@ $journals = [
   Wiadomosci_SP_IPA::class,
   Policja_Lodzkie::class,
   Przeglad_Prewencyjny::class,
+  Stoleczny_Magazyn_Policyjny::class,
 ];
 
 foreach ($journals as $journal) {
