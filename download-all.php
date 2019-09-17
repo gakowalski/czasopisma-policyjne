@@ -38,6 +38,7 @@ $journals = [
   Policja_997_Wydanie_Specjalne::class,
   Kwartalnik_Prawno_Kryminalistyczny::class,
   Kwartalnik_Policyjny::class,
+  Wiadomosci_SP_IPA::class,
 ];
 
 foreach ($journals as $journal) {
