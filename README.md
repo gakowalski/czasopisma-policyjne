@@ -22,20 +22,22 @@ Aby skorzystać z bardzo podstawowego wsparcia dla OCR przez zewnętrzne narzęd
 
 ## Dane
 
-Do pobrania jest 800+ plików, które po pobraniu zajmują ponad 9 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. Wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości) i jest nieprzeszukiwalna. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
+Do pobrania jest 900+ plików, które po pobraniu zajmują ponad 9.4 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. Wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości) i jest nieprzeszukiwalna. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
 
 Pobierane czasopisma:
-* Policja 997,
-* Policja 997 wydanie specjalne,
+
 * Gazeta Policyjna,
+* Kwartalnik Prawno-Kryminalistyczny,
+* Kwartalnik policyjny,
 * Magazyn Kryminalny,
 * Patrol,
-* Wiadomości Sekcji Polskiej IPA,
+* Policja 997,
+* Policja 997 wydanie specjalne,
 * Policja Łódzkie,
+* Policyjny Głos Mazowsza,
 * Przegląd Prewencyjny,
 * Stołeczny Magazyn Policyjny,
-* Kwartalnik Prawno-Kryminalistyczny,
-* Kwartalnik policyjny.
+* Wiadomości Sekcji Polskiej IPA.
 
 ## Jak uzyskano linki?
 
