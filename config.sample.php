@@ -18,4 +18,5 @@ $journals = [
   Policja_Lodzkie::class,
   Przeglad_Prewencyjny::class,
   Stoleczny_Magazyn_Policyjny::class,
+  Policyjny_Glos_Mazowsza::class,
 ];

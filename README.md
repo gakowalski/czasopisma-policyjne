@@ -49,6 +49,7 @@ Linki do plików wzięto z publicznie dostępnych zasobów serwisów:
 * http://pomorska.policja.gov.pl/
 * http://ipapolska.pl/
 * http://magazyn.policja.waw.pl/
+* http://www.mazowiecka.policja.gov.pl
 
 Wybierano je w sposób częściowo zautomatyzowany ze stron za pomocą kodu JavaScript:
 

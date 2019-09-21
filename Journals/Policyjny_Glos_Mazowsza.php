@@ -161,6 +161,10 @@ class Policyjny_Glos_Mazowsza extends Journal {
   }
 
   public static function download_collection($OCR = false) {
+    global $enabled_unrar;
+    if ($enabled_unrar === false) {
+      echo "\nPomijam kolekcję \"" . static::get_title() . "\" bo wyłączona opcja UNRAR\n";
+    }
     $download_count = 0;
     echo "\nPrzetwarzam kolekcję \"" . static::get_title() . "\"\n";
 
