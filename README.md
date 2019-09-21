@@ -1,4 +1,4 @@
-# Czasopisma policyjne
+# Czasopisma policyjne i sądownicze
 
 ## Wprowadzenie
 
@@ -22,9 +22,9 @@ Aby skorzystać z bardzo podstawowego wsparcia dla OCR przez zewnętrzne narzęd
 
 ## Dane
 
-Do pobrania jest 900+ plików, które po pobraniu zajmują ponad 9.4 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. Wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości) i jest nieprzeszukiwalna. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
+Do pobrania jest 980+ plików, które po pobraniu zajmują ponad 9.4 GB danych. Część z nich ma przeszukiwalny tekst, ale kodowanie plików i dziwne łączenie lub rozdzielanie wyrazów czynią przeszukiwanie dosyć nieefektywnym. Wiele z PDF-ów starszych roczników zawiera po prostu skany (niekoniecznie wysokiej jakości) i jest nieprzeszukiwalna. Zdaje się więc, że kolejnym krokiem dzialania na pobranych plikach powinno być ich przetworzenie na tekst za pomocą narzędzia do OCR. Obecnie skrypt posiada podstawowe wsparcie dla narzędzia NASP2 w tym zakresie, ale jeżeli ktoś ma dostęp do profesjonalnych narzędzi typu FineReader to chyba próbowałbym podążać tą drogą.
 
-Pobierane czasopisma:
+Pobierane czasopisma policyjne:
 
 * Gazeta Policyjna,
 * Kwartalnik Prawno-Kryminalistyczny,
@@ -38,6 +38,10 @@ Pobierane czasopisma:
 * Przegląd Prewencyjny,
 * Stołeczny Magazyn Policyjny,
 * Wiadomości Sekcji Polskiej IPA.
+
+Pobierane czasopisma sądownicze:
+
+* Kwartalnik Krajowej Rady Sądownictwa.
 
 ## Jak uzyskano linki?
 

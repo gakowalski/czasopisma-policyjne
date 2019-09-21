@@ -19,4 +19,6 @@ $journals = [
   Przeglad_Prewencyjny::class,
   Stoleczny_Magazyn_Policyjny::class,
   Policyjny_Glos_Mazowsza::class,
+
+  Kwartalnik_Krajowej_Rady_Sadownictwa::class,
 ];
